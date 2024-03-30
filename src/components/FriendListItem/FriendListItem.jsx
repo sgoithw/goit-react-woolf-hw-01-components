@@ -14,7 +14,7 @@ function FriendListItem({ avatar, name, isOnline, id }) {
       <img
         className={styles.avatar}
         src={avatar}
-        alt={`A photo of ${name}`}
+        alt={`${name} avatar`}
         width="48"
       />
       <p className={styles.name}>{name}</p>
