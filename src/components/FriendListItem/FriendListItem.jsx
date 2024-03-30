@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 function FriendListItem({ avatar, name, isOnline, id }) {
   return (
-    <li className={styles.item} key={id}>
+    <li className={styles.item}>
       <span
         className={clsx({
           [styles.status]: true,
@@ -11,7 +11,12 @@ function FriendListItem({ avatar, name, isOnline, id }) {
           [styles.offline]: !isOnline,
         })}
       ></span>
-      <img className={styles.avatar} src={avatar} alt={name} width="48" />
+      <img
+        className={styles.avatar}
+        src={avatar}
+        alt={`A photo of ${name}`}
+        width="48"
+      />
       <p className={styles.name}>{name}</p>
     </li>
   );

@@ -8,17 +8,20 @@ function Statistics({ title, stats }) {
   };
 
   return (
-    <section class={styles.statistics}>
-      {title && <h2 class={styles.title}>{title}</h2>}
-      <ul class={styles.statList}>
+    <section className={styles.statistics}>
+      {title && <h2 className={styles.title}>{title}</h2>}
+      <ul className={styles.statList}>
         {stats.map(({ id, percentage, label }) => (
           <li
-            class={styles.item}
-            style={{ backgroundColor: randomColor() }}
+            className={styles.item}
+            style={{
+              backgroundColor: randomColor(),
+              width: `${100 / stats.length}%`,
+            }}
             key={id}
           >
-            <span class={styles.label}>{label}</span>
-            <span class={styles.percentage}>{percentage}</span>
+            <span className={styles.label}>{label}</span>
+            <span className={styles.percentage}>{percentage}</span>
           </li>
         ))}
       </ul>
