@@ -1,8 +1,36 @@
 .item {
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 3px 5px 9px 0px #dadada;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
 }
 .status {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background: #d6d6d6;
+}
+.status.online {
+  background: #4cae4c;
+}
+.status.offline {
+  background: #d9534f;
 }
 .avatar {
+  width: 48px;
+  height: 48px;
+  margin-left: 10px;
 }
 .name {
+  font-size: 18px;
+  margin-left: 10px;
 }

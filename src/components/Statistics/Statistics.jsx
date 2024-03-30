@@ -1,12 +1,24 @@
+import styles from './Statistics.module.css';
+
 function Statistics({ title, stats }) {
+  const randomColor = () => {
+    return `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${
+      Math.random() * 255
+    })`;
+  };
+
   return (
-    <section class="statistics">
-      <h2 class="title">{title}</h2>
-      <ul class="stat-list">
+    <section class={styles.statistics}>
+      {title && <h2 class={styles.title}>{title}</h2>}
+      <ul class={styles.statList}>
         {stats.map(({ id, percentage, label }) => (
-          <li class="item" key={id}>
-            <span class="label">{label}</span>
-            <span class="percentage">{percentage}</span>
+          <li
+            class={styles.item}
+            style={{ backgroundColor: randomColor() }}
+            key={id}
+          >
+            <span class={styles.label}>{label}</span>
+            <span class={styles.percentage}>{percentage}</span>
           </li>
         ))}
       </ul>

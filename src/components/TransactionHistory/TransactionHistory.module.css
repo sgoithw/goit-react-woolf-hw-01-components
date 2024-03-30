@@ -1,2 +1,32 @@
-.transaction-history {
+.transactionHistory {
+  width: 500px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 3px 5px 9px 0px #dadada;
+  padding: 8px;
+}
+.transactionHistory thead {
+  background: #13d3e9;
+  color: white;
+}
+
+.transactionHistory thead tr {
+}
+
+.transactionHistory thead tr th {
+  padding: 10px;
+}
+
+.transactionHistory tbody {
+}
+
+.transactionHistory tbody tr {
+}
+
+.transactionHistory tbody tr:nth-of-type(2n) {
+  background: #f3f3f3;
+}
+
+.transactionHistory tbody tr td {
+  padding: 10px;
 }
